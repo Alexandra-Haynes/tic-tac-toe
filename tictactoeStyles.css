@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(188, 228, 215);
+    height: 100vh;
+    font-family: 'Arial Narrow Bold', sans-serif
+}
+
+#game-title {
+    color: white;
+
+}
+
+#tic,
+#tac,
+#toe {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    letter-spacing: 4px;
+    height: 20px;
+}
+
+#tic:hover,
+#tac:hover,
+#toe:hover {
+    font-size: 2.1rem;
+    color: rgb(247, 163, 163);
+    transition: 0.2s ease-in-out;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.board {
+    width: 320px;
+    height: 320px;
+    background-image: url('grid.png');
+    background-size: cover;
+    /* when img is too big */
+    margin-top: 2rem;
+    border: 2px solid grey;
+    border-radius: 2px;
+    box-shadow: 0 0 15px 15px rgba(63, 63, 61, 0.1);
+    /* organizing the cells */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2px;
+}
+
+.board:hover {
+    cursor: pointer;
+}
+
+.circle {
+    background-image: url('circle.png');
+}
+
+.cross {
+    background-image: url('cross.png');
+}
+
+.cross,
+.circle {
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#result {
+    color: white;
+    font-size: 1.4rem;
+    padding-bottom: 2rem;
+    letter-spacing: 4px;
+    height: 20px;
+    padding: 2rem;
+}
+
+#game-over {
+    color: rgb(245, 18, 18);
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    letter-spacing: 4px;
+    height: 20px;
+    padding: 2rem;
+}
+
+#restart {
+    padding: 4px 10px;
+    background-color: rgb(247, 224, 69);
+    border: none;
+    font-size: 1.4rem;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+#restart:hover {
+    background-color: rgb(247, 163, 163);
+    scale: 104%;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
